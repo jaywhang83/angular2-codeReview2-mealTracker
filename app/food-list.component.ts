@@ -2,15 +2,23 @@ import { Component, EventEmitter } from 'angular2/core';
 import { Food } from './food.model';
 import { FoodComponent} from './food.component';
 import { NewFoodComponent} from './new-food-component';
+import { CaloriesPipe } from './calories.pipe';
 
 @Component({
   selector: 'food-list',
   inputs: ['foodList'],
   outputs: ['onFoodSelect'],
+  pipes: [CaloriesPipe],
   directives: [FoodComponent, NewFoodComponent],
   template:
   `
-  <food-display *ngFor="#currentFood of foodList"
+  <select (change)="onChange($event.target.value)" class="filter">
+	  <option value="all" selected="selected">Show All Foods</option>
+	  <option value="healthy">Show Healthy Foods</option>
+	  <option value="unhealthy">Show Unhealthy Foods</option>
+	</select>
+
+  <food-display *ngFor="#currentFood of foodList | calories: filterCalories"
     (click)="foodClicked(currentFood)"
     [class.selected]="currentFood === selectedFood"
     [food]="currentFood">
@@ -23,6 +31,7 @@ export class FoodListComponent {
   public foodList: Food[];
   public onFoodSelect: EventEmitter<Food>;
   public selectedFood: Food;
+  public filterCalories: string = "all";
   constructor() {
     this.onFoodSelect = new EventEmitter();
   }
@@ -35,7 +44,12 @@ export class FoodListComponent {
 
   createFood(food: Object):void {
     this.foodList.push(
-      new Food(food["name"], food["details"], food["carolies"], this.foodList.length)
+      new Food(food["name"], food["details"], food["calories"], this.foodList.length)
     );
   }
+
+  onChange(filterOption) {
+		this.filterCalories = filterOption;
+		console.log(this.filterCalories);
+	}
 }

@@ -22,7 +22,7 @@ export class AppComponent {
     this.foods = [
       new Food("Burrito", "Finished all of it", 500, 0),
       new Food("Cheese Burger", "Did not get fries", 650, 1),
-      new Food("Sushi", "Ate three rolls", 400, 2)
+      new Food("Sushi", "Ate three rolls", 250, 2)
     ];
   }
 
