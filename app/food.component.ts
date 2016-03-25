@@ -9,11 +9,8 @@ import { FoodDetailsComponent } from './show-food-details.component';
   directives: [FoodDetailsComponent],
   template:
   `
-  <div class="container">
-    <h2>{{ food.name }}</h2>
-  </div>
+    <h2 class="foodName">{{ food.name }}</h2>
   `
-
 })
 
 export class FoodComponent {
@@ -30,4 +27,3 @@ export class FoodComponent {
     this.onFoodNameSelect.emit(clickedFood);
   }
 }
-console.log("food is", this.food);

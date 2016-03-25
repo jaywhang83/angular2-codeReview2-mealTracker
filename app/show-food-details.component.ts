@@ -25,5 +25,3 @@ export class FoodDetailsComponent {
   public showsEdit: boolean;
   public food: Food;
 }
-
-console.log("food is", this.food);

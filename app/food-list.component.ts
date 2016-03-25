@@ -25,7 +25,8 @@ import { FoodDetailsComponent } from './show-food-details.component';
     <food-display *ngFor="#currentFood of foodList | calories: filterCalories"
       (click)="foodClicked(currentFood)"
       [class.selected]="currentFood === selectedFood"
-      [food]="currentFood">
+      [food]="currentFood"
+      [foodChildList]="foodList">
     </food-display>
     <details-display *ngIf="selectedFood" [food]="selectedFood">
     </details-display>
@@ -33,8 +34,6 @@ import { FoodDetailsComponent } from './show-food-details.component';
   <div class="col-md-6">
     <new-food (onSubmitNewFood)="createFood($event)"></new-food>
   </div>
-
-
   `
 })
 
