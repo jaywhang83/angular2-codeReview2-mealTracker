@@ -9,7 +9,7 @@ import { FoodDetailsComponent } from './show-food-details.component';
   directives: [FoodDetailsComponent],
   template:
   `
-  <div>
+  <div class="container">
     <h2>{{ food.name }}</h2>
   </div>
   `
