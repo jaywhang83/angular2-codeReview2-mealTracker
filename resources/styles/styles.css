@@ -1,0 +1,38 @@
+body {
+  background-image: url("https://kathleenflinn.files.wordpress.com/2011/05/veggies.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+div.jumbotron {
+  text-align: center;
+  background: rgba(248, 248, 245, 0.5);
+  box-shadow: 2px 2px 2px #888888;
+}
+
+input {
+  background: rgba(248, 248, 245, 0.8);
+  box-shadow: 5px 5px 5px #888888;
+}
+
+div.row {
+  padding-top: 20px;
+}
+
+div.details{
+  padding-top: 50px;
+}
+
+h1, h2, h3, li {
+  color: #F8F8FF;
+  font-weight: bold;
+}
+
+h3 {
+  font-size: 30px;
+}
+
+li {
+  font-size: 20px;
+}

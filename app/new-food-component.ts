@@ -8,17 +8,17 @@ import { Food } from './food.model';
   template:
   `
   <div class="food-form container">
-		<h3>Create Task:</h3>
+		<h1>Create Task:</h1>
     <div class="container">
-  		<input placeholder="Name" class="col-sm-8 input-lg" #newName>
+  		<input placeholder="Name" class="col-sm-6 input-lg" #newName>
     </div>
     <br>
     <div class="container">
-      <input placeholder="Details" class="col-sm-8 input-lg" #newDetails>
+      <input placeholder="Details" class="col-sm-6 input-lg" #newDetails>
     </div>
     <br>
     <div class="container">
-      <input placeholder="Calories" class="col-sm-8 input-lg" #newCalroies>
+      <input placeholder="Calories" class="col-sm-6 input-lg" #newCalroies>
     </div>
     <br>
 		<button (click)="addFood(newName, newDetails, newCalroies)" class="btn-success btn-lg add-button">Add</button>

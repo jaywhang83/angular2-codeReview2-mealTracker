@@ -9,15 +9,15 @@ import { Food } from './food.model';
   <div class="edit-form container">
     <div class="container inputs">
       <h3>Edit Name: </h3>
-      <input [(ngModel)]="food.name" class="col-sm-8 input-lg edit-form" />
+      <input [(ngModel)]="food.name" class="col-sm-6 input-lg edit-form" />
     </div>
     <div class="container inputs">
       <h3>Edit Details: </h3>
-      <input [(ngModel)]="food.details" class="col-sm-8 input-lg edit-form" />
+      <input [(ngModel)]="food.details" class="col-sm-6 input-lg edit-form" />
     </div>
     <div class="container inputs">
       <h3>Edit Calories: </h3>
-      <input [(ngModel)]="food.calories" class="col-sm-8 input-lg edit-form" />
+      <input [(ngModel)]="food.calories" class="col-sm-6 input-lg edit-form" />
     </div>
   </div>
   `

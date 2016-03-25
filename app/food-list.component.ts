@@ -14,23 +14,26 @@ import { FoodDetailsComponent } from './show-food-details.component';
   directives: [FoodComponent, NewFoodComponent, FoodDetailsComponent],
   template:
   `
-  <select (change)="onChange($event.target.value)" class="filter">
-	  <option value="all" selected="selected">Show All Foods</option>
-	  <option value="healthy">Show Healthy Foods</option>
-	  <option value="unhealthy">Show Unhealthy Foods</option>
-	</select>
+  <div class="col-md-6">
+    <select (change)="onChange($event.target.value)" class="filter">
+  	  <option value="all" selected="selected">Show All Foods</option>
+  	  <option value="healthy">Show Healthy Foods</option>
+  	  <option value="unhealthy">Show Unhealthy Foods</option>
+  	</select>
 
-  <h1>Foods:</h1>
-  <food-display *ngFor="#currentFood of foodList | calories: filterCalories"
-    (click)="foodClicked(currentFood)"
-    [class.selected]="currentFood === selectedFood"
-    [food]="currentFood">
-  </food-display>
+    <h1>Foods:</h1>
+    <food-display *ngFor="#currentFood of foodList | calories: filterCalories"
+      (click)="foodClicked(currentFood)"
+      [class.selected]="currentFood === selectedFood"
+      [food]="currentFood">
+    </food-display>
+    <details-display *ngIf="selectedFood" [food]="selectedFood">
+    </details-display>
+  </div>
+  <div class="col-md-6">
+    <new-food (onSubmitNewFood)="createFood($event)"></new-food>
+  </div>
 
-  <new-food (onSubmitNewFood)="createFood($event)"></new-food>
-
-  <details-display *ngIf="selectedFood" [food]="selectedFood">
-  </details-display>
 
   `
 })
