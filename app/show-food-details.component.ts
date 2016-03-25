@@ -16,7 +16,7 @@ import { EditFoodDetailsComponent } from './edit-food-details.component';
     </ul>
     <button *ngIf="!showsEdit" (click)= "showsEdit =true"  class="btn-info btn-lg">Edit Food</button>
     <edit-food-details *ngIf="showsEdit" [food]="food">
-  	</edit-food-details>
+    </edit-food-details>
   </div>
   `
 })

@@ -1,7 +1,6 @@
 import { Component, EventEmitter } from 'angular2/core';
 import { Food } from './food.model';
 
-
 @Component ({
   selector: 'new-food',
   outputs: ['onSubmitNewFood'],
@@ -10,7 +9,7 @@ import { Food } from './food.model';
   <div class="food-form container">
 		<h1>Create Task:</h1>
     <div class="container">
-  		<input placeholder="Name" class="col-sm-6 input-lg" #newName>
+      <input placeholder="Name" class="col-sm-6 input-lg" #newName>
     </div>
     <br>
     <div class="container">
@@ -21,7 +20,7 @@ import { Food } from './food.model';
       <input placeholder="Calories" class="col-sm-6 input-lg" #newCalroies>
     </div>
     <br>
-		<button (click)="addFood(newName, newDetails, newCalroies)" class="btn-success btn-lg add-button">Add</button>
+    <button (click)="addFood(newName, newDetails, newCalroies)" class="btn-success btn-lg add-button">Add</button>
 	</div>
   `
 })
