@@ -15,4 +15,5 @@ import { Food } from './food.model';
 
 export class FoodComponent {
   public food: Food;
+  public selectedFoodName: Food;
 }
