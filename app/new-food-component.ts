@@ -21,7 +21,7 @@ import { Food } from './food.model';
     </div>
     <br>
     <button (click)="addFood(newName, newDetails, newCalroies)" class="btn-success btn-lg add-button">Add</button>
-	</div>
+  </div>
   `
 })
 

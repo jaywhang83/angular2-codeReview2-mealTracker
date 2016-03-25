@@ -16,9 +16,9 @@ import { FoodDetailsComponent } from './show-food-details.component';
   `
   <div class="col-md-6">
     <select (change)="onChange($event.target.value)" class="filter">
-  	  <option value="all" selected="selected">Show All Foods</option>
-  	  <option value="healthy">Show Healthy Foods</option>
-  	  <option value="unhealthy">Show Unhealthy Foods</option>
+      <option value="all" selected="selected">Show All Foods</option>
+      <option value="healthy">Show Healthy Foods</option>
+      <option value="unhealthy">Show Unhealthy Foods</option>
     </select>
 
     <h1>Foods:</h1>
