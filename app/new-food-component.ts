@@ -7,7 +7,7 @@ import { Food } from './food.model';
   template:
   `
   <div class="food-form container">
-		<h1>Create Task:</h1>
+    <h1>Create Task:</h1>
     <div class="container">
       <input placeholder="Name" class="col-sm-6 input-lg" #newName>
     </div>
