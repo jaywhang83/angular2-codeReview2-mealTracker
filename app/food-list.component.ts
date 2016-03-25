@@ -3,13 +3,15 @@ import { Food } from './food.model';
 import { FoodComponent} from './food.component';
 import { NewFoodComponent} from './new-food-component';
 import { CaloriesPipe } from './calories.pipe';
+import { FoodDetailsComponent } from './show-food-details.component';
+import { EditFoodDetailsComponent } from './edit-food-details.component';
 
 @Component({
   selector: 'food-list',
   inputs: ['foodList'],
   outputs: ['onFoodSelect'],
   pipes: [CaloriesPipe],
-  directives: [FoodComponent, NewFoodComponent],
+  directives: [FoodComponent, NewFoodComponent, FoodDetailsComponent, EditFoodDetailsComponent],
   template:
   `
   <select (change)="onChange($event.target.value)" class="filter">
@@ -23,7 +25,14 @@ import { CaloriesPipe } from './calories.pipe';
     [class.selected]="currentFood === selectedFood"
     [food]="currentFood">
   </food-display>
+
+  <details-display *ngIf="selectedFood" [food]="selectedFood">
+  </details-display>
+
   <new-food (onSubmitNewFood)="createFood($event)"></new-food>
+
+  <edit-food-details *ngIf="selectedFood" [food]="selectedFood">
+	</edit-food-details>
   `
 })
 
