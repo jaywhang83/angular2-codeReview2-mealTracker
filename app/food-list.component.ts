@@ -20,6 +20,7 @@ import { FoodDetailsComponent } from './show-food-details.component';
 	  <option value="unhealthy">Show Unhealthy Foods</option>
 	</select>
 
+  <h1>Foods:</h1>
   <food-display *ngFor="#currentFood of foodList | calories: filterCalories"
     (click)="foodClicked(currentFood)"
     [class.selected]="currentFood === selectedFood"

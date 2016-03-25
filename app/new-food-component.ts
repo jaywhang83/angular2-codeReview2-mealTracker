@@ -8,13 +8,21 @@ import { Food } from './food.model';
   template:
   `
   <div class="food-form container">
-			<h3>Create Task:</h3>
-			<input placeholder="Name" class="col-sm-8 input-lg" #newName>
+		<h3>Create Task:</h3>
+    <div class="container">
+  		<input placeholder="Name" class="col-sm-8 input-lg" #newName>
+    </div>
+    <br>
+    <div class="container">
       <input placeholder="Details" class="col-sm-8 input-lg" #newDetails>
+    </div>
+    <br>
+    <div class="container">
       <input placeholder="Calories" class="col-sm-8 input-lg" #newCalroies>
-
-			<button (click)="addFood(newName, newDetails, newCalroies)" class="btn-success btn-lg add-button">Add</button>
-		</div>
+    </div>
+    <br>
+		<button (click)="addFood(newName, newDetails, newCalroies)" class="btn-success btn-lg add-button">Add</button>
+	</div>
   `
 })
 
