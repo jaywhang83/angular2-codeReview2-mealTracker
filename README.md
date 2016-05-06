@@ -1,14 +1,14 @@
 #Meal Tracker
 
-* _A Meal tracker app, 3/25/2016_
-* By: Jay Whang
+_A Meal tracker app, 3/25/2016_
+_By: Jay Whang
 
 
-* This is a app displays detail information about meal
+_This is a app displays detail information about meal
 
 #Description
 
-* This application allows the user to view, create, and edit meals user ate. User can view meals by calorie level, create meal, and edit existing meals name, detail, and calories.
+_This application allows the user to view, create, and edit meals user ate. User can view meals by calorie level, create meal, and edit existing meals name, detail, and calories.
 
 #Setup/Installation Requirements
 - clone repo
@@ -24,7 +24,7 @@
 - gulp serve
 
 #Support and contact details
-* contact Jay at: jaywhang83@gmail.com
+_contact Jay at: jaywhang83@gmail.com
 
 
 #Technologies Used
